@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/06 23:41:02 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/06 23:41:16 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,31 @@ class Bureaucrat {
 
 nem tudom ideirok valamit mintha csináltam cvolna meg ide is mintha törtlént volna vlamai
 teljesen kivagyok az élettől csak aludni akarok
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Remember. Since grade 1 is the highest one and 150 the lowest,
 incrementing a grade 3 should give a grade 2 to the bureaucrat.
