@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:32:06 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/15 07:29:42 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/15 16:08:13 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,14 @@
 // Any attempt to instantiate a Bureaucrat using an invalid grade must throw an exception
 
 int	main() {
+	try
+	{
+		/* code */
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
   		
 }
