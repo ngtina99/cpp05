@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/15 08:53:20 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/15 22:54:06 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class Bureaucrat {
 	
 	private:
-	
-		static const int _maxGrade = 1;
+
 		static const int _minGrade = 150;
+		static const int _maxGrade = 1;
 		std::string const _name;
 		int _grade;
 
@@ -66,6 +66,6 @@ class Bureaucrat {
 
 };
 
-std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy)
+std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy);
 
 #endif
