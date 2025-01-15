@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/06 23:41:34 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/15 07:29:59 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,27 @@ class Bureaucrat {
 
 	public:
 
-		getName();
-		getGrade();
-		increment
-		decrement
- 
-}
+		/* Orthodox Canonical Form */
+		/* Default Constructor with no parameter */
+		Bureaucrat ();
+		/* Default Constructor with parameter */
+		Bureaucrat( std:: string &name );
+		Bureaucrat( int grade );
+		Bureaucrat( std:: string &name, int grade );
+		/* Copy Constructor */
+		Bureaucrat ( const Bureaucrat &copy); /* passing the existing object */
+		/* Copy Assignment Operator */
+		Bureaucrat	&operator=( const Bureaucrat &rhs );
+		/* Destructor */
+		~Bureaucrat();
 
-Remember. Since grade 1 is the highest one and 150 the lowest,
-incrementing a grade 3 should give a grade 2 to the bureaucrat.
+		std::string const	&getName() const;
+		int const getGrade() const;
+		
+		
+		
+} 
 
-
-Any attempt to instantiate a Bureaucrat using an invalid grade must throw an exception
+std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy)
 
 #endif
