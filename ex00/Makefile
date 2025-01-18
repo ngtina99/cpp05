@@ -1,4 +1,4 @@
-NAME = Bureaucrat
+NAME = ex00
 
 SRC = main.cpp Bureaucrat.cpp
 OBJ = $(SRC:.cpp=.o)
