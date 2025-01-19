@@ -6,14 +6,14 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/18 23:09:03 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/19 00:04:04 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
-#include <iostream.h>
+#include <iostream>
 
 class Bureaucrat;
 
@@ -47,7 +47,7 @@ class Form {
 		std::string const &getName() const;
 		std::string getSigned() const;
 		int const getGradeSign() const;
-		int const getGradeExecution() const;
+		int const getGradeExecute() const;
 
 		void	beSigned(Bureaucrat &copy);
 

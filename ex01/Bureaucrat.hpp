@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/18 22:23:59 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/18 23:57:15 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+
+class Form;
 
 class Bureaucrat {
 	
@@ -64,7 +66,7 @@ class Bureaucrat {
 				const char *what() const throw();
 		};
 
-		void	signForm();
+		void	signForm(Form &formToSign);
 		// 		Lastly, add a signForm() member function to the Bureaucrat. If the form got signed,
 // it will print something like:
 // <bureaucrat> signed <form>

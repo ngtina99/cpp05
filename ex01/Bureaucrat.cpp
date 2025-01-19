@@ -6,12 +6,12 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/16 00:32:07 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/19 00:52:37 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
+#include "Form.hpp"
 //If the grade is out of range, both of them will throw the same exceptions as the constructor.
 
 Bureaucrat::Bureaucrat(): _name("defaultName"), _grade(150) {
@@ -91,6 +91,17 @@ const char *Bureaucrat::GradeTooLowException::what() const throw() {
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
 	return("\033[1;31mGrade is Too High\033[0m");
+}
+
+void	Bureaucrat::signForm(Form &formToSign) {
+	try {
+		formToSign.beSigned(*this);
+		std::cout << "\033[1;32m" << this->_name << " signed " << formToSign.getName() << "\033[0m" << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << this->_name << " couldn't sign " << formToSign.getName() << " because: ";
+		std::cerr << e.what() <<'\n';
+	}
 }
 
 std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy) {
