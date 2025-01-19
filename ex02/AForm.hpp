@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 00:04:04 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/19 01:18:02 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #define FORM_HPP
 
 #include <iostream>
+
+#define MYRED "\033[1;31m"
+#define MYEOF "\033[0m"
+#define MYBLUE "\033[1;34m"
+#define MYGREEN "\033[1;32m"
+
 
 class Bureaucrat;
 

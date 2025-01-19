@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/18 23:57:15 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/19 01:11:54 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+
+#define MYRED "\033[1;31m"
+#define MYEOF "\033[0m"
 
 class Form;
 

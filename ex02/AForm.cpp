@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:37 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:01:54 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/19 01:15:36 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,13 +112,13 @@ int const Form::getGradeExecute() const {
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
-	return( "\033[1;31mGrade is Too Low\033[0m");
+	return( MYRED "Grade is Too Low" MYEOF);
 }
 
 const char *Form::GradeTooHighException::what() const throw() {
-	return("\033[1;31mGrade is Too High\033[0m");
+	return(MYRED "Grade is Too High" MYEOF);
 }
 
 std::ostream	&operator<<( std::ostream &op, const Form &copy ) {
-	return( op << "\033[1;34m" << copy.getName() << " is " << copy.getSigned() << ", form signing grade " << copy.getGradeSign() << ", form execution grade " << copy.getGradeExecute() << "\033[0m" << std::endl);
+	return( op << MYBLUE << copy.getName() << " is " << copy.getSigned() << ", form signing grade " << copy.getGradeSign() << ", form execution grade " << copy.getGradeExecute() << MYEOF << std::endl);
 }

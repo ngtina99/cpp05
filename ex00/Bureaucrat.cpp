@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/16 00:32:07 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/19 01:12:50 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,14 @@ int	const Bureaucrat::getGrade() const {
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-	return("\033[1;31mGrade is Too Low\033[0m");
+	return(MYRED "Grade is Too Low" MYEOF);
 } 
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-	return("\033[1;31mGrade is Too High\033[0m");
+	return(MYRED "Grade is Too High" MYEOF);
 }
 
 std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy) {
 	/*<name>, bureaucrat grade <grade>*/
-	return(op << "\033[1;34m" << copy.getName() << ", bureaucrat grade " << copy.getGrade() << "\033[0m" << std::endl);
+	return(op << MYBLUE << copy.getName() << ", bureaucrat grade " << copy.getGrade() << MYEOF << std::endl);
 }
