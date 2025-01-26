@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:18:02 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/26 23:31:21 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 class Bureaucrat;
 
-class Form {
+class AForm {
 
 	private:
 
@@ -36,26 +36,27 @@ class Form {
 
 	public:
 
-		/* Orthodox Canonical Form */
+		/* Orthodox Canonical AForm */
 		/* Default Constructor with no parameter */
-		Form ();
+		AForm ();
 		/* Default Constructor with parameter */
-		Form ( const std:: string &name );
-		Form( int const gradeSign, int const gradeExecute );
-		Form( const std:: string &name, int const gradeSign, int const gradeExecute );
+		AForm ( const std:: string &name );
+		AForm( int const gradeSign, int const gradeExecute );
+		AForm( const std:: string &name, int const gradeSign, int const gradeExecute );
 		/* Copy Constructor */
-		Form ( const Form &copy); /* passing the existing object */
+		AForm ( const AForm &copy); /* passing the existing object */
 		/* Copy Assignment Operator */
-		Form	&operator=( const Form &rhs );
+		AForm	&operator=( const AForm &rhs );
 		/* Destructor */
-		~Form();
+		virtual ~AForm();
 
 		std::string const &getName() const;
 		std::string getSigned() const;
 		int const getGradeSign() const;
 		int const getGradeExecute() const;
 
-		void	beSigned(Bureaucrat &copy);
+		void			beSigned(Bureaucrat &copy);
+		virtual void	execute(Bureaucrat const & executor) const = 0;
 
 		class GradeTooHighException : public std::exception {
 			
@@ -73,6 +74,6 @@ class Form {
 		};
 };
 
-std::ostream &operator<<( std::ostream &op, const Form &copy);
+std::ostream &operator<<( std::ostream &op, const AForm &copy);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:11:54 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/26 23:32:45 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #define MYRED "\033[1;31m"
 #define MYEOF "\033[0m"
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 	
@@ -31,7 +31,7 @@ class Bureaucrat {
 
 	public:
 
-		/* Orthodox Canonical Form */
+		/* Orthodox Canonical AForm */
 		/* Default Constructor with no parameter */
 		Bureaucrat ();
 		/* Default Constructor with parameter */
@@ -69,7 +69,8 @@ class Bureaucrat {
 				const char *what() const throw();
 		};
 
-		void	signForm(Form &formToSign);
+		void	signForm(AForm &formToSign);
+		void	executeForm(AForm const & form);
 		// 		Lastly, add a signForm() member function to the Bureaucrat. If the form got signed,
 // it will print something like:
 // <bureaucrat> signed <form>

@@ -6,12 +6,12 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:14:42 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/26 23:48:15 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 //If the grade is out of range, both of them will throw the same exceptions as the constructor.
 
 Bureaucrat::Bureaucrat(): _name("defaultName"), _grade(150) {
@@ -93,13 +93,24 @@ const char *Bureaucrat::GradeTooHighException::what() const throw() {
 	return(MYRED "Grade is Too High" MYEOF);
 }
 
-void	Bureaucrat::signForm(Form &formToSign) {
+void	Bureaucrat::signForm(AForm &formToSign) {
 	try {
 		formToSign.beSigned(*this);
 		std::cout << MYGREEN << this->_name << " signed " << formToSign.getName() << MYEOF << std::endl;
 	}
 	catch (std::exception &e) {
 		std::cout << this->_name << " couldn't sign " << formToSign.getName() << " because: ";
+		std::cerr << e.what() <<'\n';
+	}
+}
+
+void	Bureaucrat::executeForm(AForm const & form) {
+	try {
+		form.execute(*this);
+		std::cout << MYGREEN << this->_name << " executed " << form.getName() << MYEOF << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << this->_name << " couldn't execute " << form.getName() << " because: ";
 		std::cerr << e.what() <<'\n';
 	}
 }
