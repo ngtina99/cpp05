@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/26 23:48:15 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/27 00:53:34 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,5 @@ void	Bureaucrat::executeForm(AForm const & form) {
 }
 
 std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy) {
-	/*<name>, bureaucrat grade <grade>*/
 	return(op << MYBLUE << copy.getName() << ", bureaucrat grade " << copy.getGrade() << MYEOF << std::endl);
 }

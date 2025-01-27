@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:37 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:15:36 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/27 03:07:04 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ Form	&Form::operator=( const Form &rhs ) {
 }
 
 Form::~Form() {
-	std::cout << "Form detructor called for " << this->_name << std::endl;
+	std::cout << "Form destructor called for " << this->_name << std::endl;
 }
 
 void	Form::beSigned(Bureaucrat &signatory) {

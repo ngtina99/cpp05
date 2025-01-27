@@ -83,7 +83,7 @@ AForm	&AForm::operator=( const AForm &rhs ) {
 }
 
 AForm::~AForm() {
-	std::cout << "AForm detructor called for " << this->_name << std::endl;
+	std::cout << "AForm destructor called for " << this->_name << std::endl;
 }
 
 void	AForm::beSigned(Bureaucrat &signatory) {
@@ -111,12 +111,20 @@ int const AForm::getGradeExecute() const {
 	return( this->_gradeExecute);
 }
 
+bool AForm::getSignedBool() const {
+	return( this->_signed);
+}
+
 const char *AForm::GradeTooLowException::what() const throw() {
 	return( MYRED "Grade is Too Low" MYEOF);
 }
 
 const char *AForm::GradeTooHighException::what() const throw() {
 	return(MYRED "Grade is Too High" MYEOF);
+}
+
+const char *AForm::FormNotSignedException::what() const throw() {
+	return(MYRED "Form is Not Signed" MYEOF);
 }
 
 std::ostream	&operator<<( std::ostream &op, const AForm &copy ) {

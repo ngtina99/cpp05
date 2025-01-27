@@ -6,12 +6,12 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/26 23:31:21 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/01/27 03:04:56 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-#define FORM_HPP
+#ifndef AFORM_HPP
+#define AFORM_HPP
 
 #include <iostream>
 
@@ -19,7 +19,7 @@
 #define MYEOF "\033[0m"
 #define MYBLUE "\033[1;34m"
 #define MYGREEN "\033[1;32m"
-
+#define MYPURPLE "\033[1;35m"
 
 class Bureaucrat;
 
@@ -54,6 +54,7 @@ class AForm {
 		std::string getSigned() const;
 		int const getGradeSign() const;
 		int const getGradeExecute() const;
+		bool	  getSignedBool() const;
 
 		void			beSigned(Bureaucrat &copy);
 		virtual void	execute(Bureaucrat const & executor) const = 0;
@@ -71,6 +72,15 @@ class AForm {
 			public:
 
 				const char *what() const throw();
+
+		};
+		
+		class FormNotSignedException : public std::exception {
+
+			public:
+
+				const char *what() const throw();
+	
 		};
 };
 
