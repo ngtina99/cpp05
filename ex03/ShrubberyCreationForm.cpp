@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:23:40 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 20:55:14 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 22:59:20 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(): AForm("ShrubberyCreationForm", 1
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target): AForm("ShrubberyCreationForm", 145,137), _target(target) {
-	std::cout << "ShrubberyCreationForm default constructor called for " << this->_target << std::endl;
+	std::cout << "ShrubberyCreationForm constructor called for " << this->_target << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm ( const ShrubberyCreationForm &copy ) : AForm("ShrubberyCreationForm", 145,137), _target(copy._target) {

@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:23:33 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 20:14:49 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 22:58:56 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45)
 }
 
 RobotomyRequestForm::RobotomyRequestForm( const std::string &target ): AForm("RobotomyRequestForm", 72, 45), _target(target) {
-	std::cout << "RobotomyRequestForm default constructor called for " << this->_target << std::endl;
+	std::cout << "RobotomyRequestForm constructor called for " << this->_target << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm ( const RobotomyRequestForm &copy ) : AForm("RobotomyRequestForm", 72, 45), _target(copy._target) {

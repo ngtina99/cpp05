@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:22:25 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/27 03:07:08 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 22:59:05 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm"
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target): AForm("PresidentialPardonForm", 25, 5), _target(target) {
-	std::cout << "PresidentialPardonForm default constructor called for " << this->_target << std::endl;
+	std::cout << "PresidentialPardonForm constructor called for " << this->_target << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm ( const PresidentialPardonForm &copy ) : AForm("PresidentialPardonForm", 25, 5), _target(copy._target) {

@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 16:03:48 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 20:59:50 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,6 @@ class Bureaucrat {
 
 		void	signForm(AForm &formToSign);
 		void	executeForm(AForm const & form);
-		// 		Lastly, add a signForm() member function to the Bureaucrat. If the form got signed,
-// it will print something like:
-// <bureaucrat> signed <form>
-// Otherwise, it will print something like:
-// <bureaucrat> couldn’t sign <form> because <reason>
 
 };
 
