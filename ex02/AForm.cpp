@@ -35,31 +35,6 @@ AForm::AForm( int const gradeSign, int const gradeExecute ): _name("formName"), 
 			" and execution grade " << this->_gradeExecute << std::endl;
 }
 
-//example
-// Bureaucrat::Bureaucrat(int grade): _name("default")
-// {
-// 	std::cout << "Bureaucrat Constructor called for " << this->getName() <<
-// 	" with grade of " << grade << std::endl;
-// 	try
-// 	{
-// 		this->setGrade(grade);
-// 	}
-// 	catch(Bureaucrat::GradeTooHighException &e)
-// 	{
-// 		std::cerr << "\033[33mConstructing " << this->getName() <<
-// 		" failed: " << e.what() << std::endl <<
-// 		"Grade now set to 1" << "\033[0m" << std::endl;
-// 		this->setGrade(1);
-// 	}
-// 	catch(Bureaucrat::GradeTooLowException &e)
-// 	{
-// 		std::cerr << "\033[33mConstructing " << this->getName() <<
-// 		" failed: " << e.what() << std::endl <<
-// 		"Grade now set to 150" << "\033[0m" << std::endl;
-// 		this->setGrade(150);
-// 	}
-// }
-
 AForm::AForm( std::string const &name, int const gradeSign, int const gradeExecute ): _name(name), _signed(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
 	if(this->_gradeExecute <_maxGrade || this->_gradeSign < _maxGrade )
 		throw(GradeTooHighException());
@@ -76,9 +51,7 @@ AForm::AForm (const AForm &copy) : _name(copy._name), _signed(copy._signed), _gr
 
 AForm	&AForm::operator=( const AForm &rhs ) {
 	if (this !=&rhs)
-		// this->_gradeExecute = rhs._gradeExecute;
-		// this->_gradeSign = rhs._gradeExecute;
-		this->_signed = rhs._signed; //only non-const memeber!!
+		this->_signed = rhs._signed;
 	return (*this);
 }
 

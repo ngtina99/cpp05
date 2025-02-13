@@ -6,23 +6,17 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/27 00:53:34 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 20:06:18 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
-//If the grade is out of range, both of them will throw the same exceptions as the constructor.
 
 Bureaucrat::Bureaucrat(): _name("defaultName"), _grade(150) {
 	std::cout << "Bureaucrat default constructor called for " << this->_name
 			  << "with grade " << this->_grade << std::endl;
 }
- 
-//When you write throw Bureaucrat::GradeTooHighException();, you're creating an instance of that class 
-//and throwing it as an exception.
-// The parentheses () indicate that the default constructor of
-// GradeTooHighException is being called to create an instance.
 
 Bureaucrat::Bureaucrat(int grade): _name("defaultName"), _grade(grade) {
 	if(this->_grade < _maxGrade)

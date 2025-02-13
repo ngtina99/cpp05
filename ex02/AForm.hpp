@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/27 03:04:56 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 20:05:27 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,20 @@ class AForm {
 	private:
 
 		std::string const _name;
-		bool	_signed; //default false at construction
-		int const _gradeSign; // constant grade required to sign it.
-		int const _gradeExecute; // constant grade required to execute it.
+		bool	_signed;
+		int const _gradeSign;
+		int const _gradeExecute;
 		static const int _minGrade = 150;
 		static const int _maxGrade = 1;
 
 	public:
 
-		/* Orthodox Canonical AForm */
-		/* Default Constructor with no parameter */
 		AForm ();
-		/* Default Constructor with parameter */
 		AForm ( const std:: string &name );
 		AForm( int const gradeSign, int const gradeExecute );
 		AForm( const std:: string &name, int const gradeSign, int const gradeExecute );
-		/* Copy Constructor */
-		AForm ( const AForm &copy); /* passing the existing object */
-		/* Copy Assignment Operator */
+		AForm ( const AForm &copy);
 		AForm	&operator=( const AForm &rhs );
-		/* Destructor */
 		virtual ~AForm();
 
 		std::string const &getName() const;
