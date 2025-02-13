@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/26 23:32:45 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 16:03:48 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,12 @@ class Bureaucrat {
 
 	public:
 
-		/* Orthodox Canonical AForm */
-		/* Default Constructor with no parameter */
 		Bureaucrat ();
-		/* Default Constructor with parameter */
 		Bureaucrat( const std:: string &name );
 		Bureaucrat( int grade );
 		Bureaucrat( const std:: string &name, int grade );
-		/* Copy Constructor */
-		Bureaucrat ( const Bureaucrat &copy); /* passing the existing object */
-		/* Copy Assignment Operator */
+		Bureaucrat ( const Bureaucrat &copy);
 		Bureaucrat	&operator=( const Bureaucrat &rhs );
-		/* Destructor */
 		~Bureaucrat();
 
 		std::string const	&getName() const;
@@ -50,9 +44,6 @@ class Bureaucrat {
 
 		void	incrGrade();
 		void	decrGrade();
-		
-		/* Bureaucrat::GradeTooHighException
-		Bureaucrat::GradeTooLowException nested classes */
 
 		class GradeTooHighException : public std::exception {
 			

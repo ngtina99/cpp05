@@ -6,18 +6,18 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:12:57 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 17:52:04 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
 #include <iostream>
 
 #define MYRED "\033[1;31m"
 #define MYEOF "\033[0m"
-#define MYBLUE "\033[1;34m]"
+#define MYBLUE "\033[1;34m"
 
 class Bureaucrat {
 	
@@ -30,18 +30,14 @@ class Bureaucrat {
 
 	public:
 
-		/* Orthodox Canonical Form */
-		/* Default Constructor with no parameter */
 		Bureaucrat ();
-		/* Default Constructor with parameter */
 		Bureaucrat( const std:: string &name );
 		Bureaucrat( int grade );
 		Bureaucrat( const std:: string &name, int grade );
-		/* Copy Constructor */
+		/* Copy  */
 		Bureaucrat ( const Bureaucrat &copy); /* passing the existing object */
 		/* Copy Assignment Operator */
 		Bureaucrat	&operator=( const Bureaucrat &rhs );
-		/* Destructor */
 		~Bureaucrat();
 
 		std::string const	&getName() const;
@@ -52,9 +48,8 @@ class Bureaucrat {
 		
 		/* Bureaucrat::GradeTooHighException
 		Bureaucrat::GradeTooLowException nested classes */
-
 		class GradeTooHighException : public std::exception {
-			
+		
 			public:
 
 				const char *what() const throw();
@@ -67,6 +62,7 @@ class Bureaucrat {
 
 				const char *what() const throw();
 		};
+		
 
 };
 

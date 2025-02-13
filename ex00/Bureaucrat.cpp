@@ -6,19 +6,17 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/19 01:12:50 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 17:48:29 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-//If the grade is out of range, both of them will throw the same exceptions as the constructor.
-
 Bureaucrat::Bureaucrat(): _name("defaultName"), _grade(150) {
 	std::cout << "Bureaucrat default constructor called for " << this->_name
 			  << "with grade " << this->_grade << std::endl;
 }
- 
+
 //When you write throw Bureaucrat::GradeTooHighException();, you're creating an instance of that class 
 //and throwing it as an exception.
 // The parentheses () indicate that the default constructor of
@@ -65,35 +63,34 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &rhs)
 
 void	Bureaucrat::incrGrade() {
 	this->_grade--;
-	if(this->_grade < _maxGrade)
-		throw(GradeTooHighException());
+	if (this->_grade < _maxGrade)
+		throw (GradeTooHighException());
 	std::cout << "Bureaucrat " << this->_name << " grade incremented to " << this->_grade << std::endl;
 }
 
 void	Bureaucrat::decrGrade() {
 	this->_grade++;
-	if(this->_grade > _minGrade)
-		throw(GradeTooLowException());
+	if (this->_grade > _minGrade)
+		throw (GradeTooLowException());
 	std::cout << "Bureaucrat " << this->_name << " grade decremented to " << this->_grade << std::endl;	
 }
 
 std::string const &Bureaucrat::getName() const {
-	return(this->_name);
+	return (this->_name);
 }
 
 int	const Bureaucrat::getGrade() const {
-	return(this->_grade);
+	return (this->_grade);
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
-	return(MYRED "Grade is Too Low" MYEOF);
+	return (MYRED "Grade is Too Low" MYEOF);
 } 
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
-	return(MYRED "Grade is Too High" MYEOF);
+	return (MYRED "Grade is Too High" MYEOF);
 }
 
 std::ostream &operator<<( std::ostream &op, const Bureaucrat &copy) {
-	/*<name>, bureaucrat grade <grade>*/
-	return(op << MYBLUE << copy.getName() << ", bureaucrat grade " << copy.getGrade() << MYEOF << std::endl);
+	return (op << MYBLUE << copy.getName() << ", bureaucrat grade " << copy.getGrade() << MYEOF << std::endl);
 }
