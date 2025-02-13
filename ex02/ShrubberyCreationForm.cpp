@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:23:40 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/27 03:07:15 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 20:55:14 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ShrubberyCreationForm::ShrubberyCreationForm ( const ShrubberyCreationForm &copy
 }
 
 ShrubberyCreationForm    &ShrubberyCreationForm::operator=( const ShrubberyCreationForm &rhs ) {
-	return *this; //everything is constants
+	return (*this);
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {
@@ -39,13 +39,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 	else if (executor.getGrade() > this->getGradeExecute())
 		throw (Bureaucrat::GradeTooLowException());
 	else {
-		std::ofstream outfile;
-		outfile.open((this->_target+"_shrubbery").c_str());	
-		//or std::string fn fn = this->_target+"_shrubbery" outfile(fn)
-	// 		fileout.open((this->_target + "_shrubbery").c_str(), std::ios::out);
-	// if (!fileout)
-	// 	throw(FileNotOpen());	
+		std::string fileName = this->_target + "_shrubbery";
+		std::ofstream outfile(fileName);	
 		outfile << TREE;
-		outfile.close();
 	}
 }
