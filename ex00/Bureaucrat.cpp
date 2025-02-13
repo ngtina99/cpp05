@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 17:48:29 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 18:39:54 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ Bureaucrat::Bureaucrat(const std::string &name): _name(name), _grade(150) {
 			  << " with grade " << this->_grade << std::endl;
 }
 
+// When you use throw in C++, it works with objects of
+//  classes that inherit from std::exception (or any class that provides a what() method). 
+// the object you throw can be of a class type (like DivisionByZeroException, GradeTooHighException, etc.), 
+// and these classes should provide the what() method.
+
 Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name), _grade(grade) {
 	if(this->_grade < _maxGrade)
 		throw(GradeTooHighException());		
@@ -60,6 +65,11 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &rhs)
 		this->_grade = rhs._grade;
 	return (*this);
 }
+
+// Basic Syntax:
+// throw exception_object;
+// Where exception_object is an instance of a class 
+// that derives from std::exception (or any other custom exception class).
 
 void	Bureaucrat::incrGrade() {
 	this->_grade--;

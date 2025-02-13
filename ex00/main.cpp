@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:32:06 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 17:55:19 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 18:44:35 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main() {
 	try
 	{
 		Bureaucrat wrongB("Miguel", 151);
+		std::cout << "Miguel initalization succeed with a grade 151!";
 	}
 	catch( std::exception& e )
 	{
@@ -33,6 +34,7 @@ int	main() {
 	try
 	{
 		Bureaucrat wrongB("Miguel", 0);
+		std::cout << "Miguel initalization succeed with a grade 0! ";
 	}
 	catch( std::exception& e )
 	{
@@ -41,28 +43,30 @@ int	main() {
 		std::cerr << e.what() << '\n';
 	}
 	
-	Bureaucrat pedroB("Pedro", 149);
-	std::cout << pedroB;
+	Bureaucrat *pedroB = new Bureaucrat("Pedro", 149);
+	std::cout << *pedroB;
 	try
 	{
-		pedroB.decrGrade();
-		std::cout << pedroB;
+		pedroB->decrGrade();
+		std::cout << *pedroB;
 	}
 	catch( std::exception& e )
 	{
-		std::cout << "Pedro failed with a grade " << pedroB.getGrade() << std::endl;
+		std::cout << "Pedro failed with a grade " << pedroB->getGrade() << std::endl;
 		std::cerr << e.what() << '\n';
 	}
 	try
 	{
-		pedroB.decrGrade();
-		std::cout << pedroB;
+		pedroB->decrGrade();
+		std::cout << *pedroB;
 	}
 	catch( std::exception& e )
 	{
-		std::cout << "Pedro failed with a grade " << pedroB.getGrade() << ": ";
+		std::cout << "Pedro failed with a grade " << pedroB->getGrade() << ": ";
 		std::cerr << e.what() << '\n';
 	}
+
+	delete pedroB;
 	
 	Bureaucrat joaoB("Joao", 2);
 	std::cout << joaoB;

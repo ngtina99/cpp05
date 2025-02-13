@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/27 00:02:23 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 19:28:12 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,26 +27,20 @@ class Form {
 	private:
 
 		std::string const _name;
-		bool	_signed; //default false at construction
-		int const _gradeSign; // constant grade required to sign it.
-		int const _gradeExecute; // constant grade required to execute it.
+		bool	_signed;
+		int const _gradeSign;
+		int const _gradeExecute;
 		static const int _minGrade = 150;
 		static const int _maxGrade = 1;
 
 	public:
 
-		/* Orthodox Canonical Form */
-		/* Default Constructor with no parameter */
 		Form ();
-		/* Default Constructor with parameter */
 		Form ( const std:: string &name );
 		Form( int const gradeSign, int const gradeExecute );
 		Form( const std:: string &name, int const gradeSign, int const gradeExecute );
-		/* Copy Constructor */
-		Form ( const Form &copy); /* passing the existing object */
-		/* Copy Assignment Operator */
+		Form ( const Form &copy);
 		Form	&operator=( const Form &rhs );
-		/* Destructor */
 		~Form();
 
 		std::string const &getName() const;

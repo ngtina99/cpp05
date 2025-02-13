@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 17:52:04 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 18:39:59 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class Bureaucrat {
 		class GradeTooHighException : public std::exception {
 		
 			public:
-
+				
 				const char *what() const throw();
 
 		};

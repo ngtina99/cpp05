@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:37 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/01/27 03:07:04 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/13 19:39:52 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,37 +28,12 @@ Form::Form( std::string const &name ): _name(name), _signed(false), _gradeSign(1
 Form::Form( int const gradeSign, int const gradeExecute ): _name("formName"), _signed(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
 	if(this->_gradeExecute <_maxGrade || this->_gradeSign < _maxGrade )
 		throw(GradeTooHighException());
-	if(this->_gradeExecute >_minGrade || this->_gradeSign >_minGrade ) //change this try catch maybe later to fix
+	if(this->_gradeExecute >_minGrade || this->_gradeSign >_minGrade )
 		throw(GradeTooLowException());
 	std::cout << "Form  constructor called for " << this->_name
 			<< " with signing grade " << this->_gradeSign <<
 			" and execution grade " << this->_gradeExecute << std::endl;
 }
-
-//example
-// Bureaucrat::Bureaucrat(int grade): _name("default")
-// {
-// 	std::cout << "Bureaucrat Constructor called for " << this->getName() <<
-// 	" with grade of " << grade << std::endl;
-// 	try
-// 	{
-// 		this->setGrade(grade);
-// 	}
-// 	catch(Bureaucrat::GradeTooHighException &e)
-// 	{
-// 		std::cerr << "\033[33mConstructing " << this->getName() <<
-// 		" failed: " << e.what() << std::endl <<
-// 		"Grade now set to 1" << "\033[0m" << std::endl;
-// 		this->setGrade(1);
-// 	}
-// 	catch(Bureaucrat::GradeTooLowException &e)
-// 	{
-// 		std::cerr << "\033[33mConstructing " << this->getName() <<
-// 		" failed: " << e.what() << std::endl <<
-// 		"Grade now set to 150" << "\033[0m" << std::endl;
-// 		this->setGrade(150);
-// 	}
-// }
 
 Form::Form( std::string const &name, int const gradeSign, int const gradeExecute ): _name(name), _signed(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
 	if(this->_gradeExecute <_maxGrade || this->_gradeSign < _maxGrade )
