@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 19:28:12 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:58 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class Form {
 		bool	_signed;
 		int const _gradeSign;
 		int const _gradeExecute;
-		static const int _minGrade = 150;
-		static const int _maxGrade = 1;
+		static const int _minGrade;
+		static const int _maxGrade;
 
 	public:
 
@@ -45,8 +45,8 @@ class Form {
 
 		std::string const &getName() const;
 		std::string getSigned() const;
-		int const getGradeSign() const;
-		int const getGradeExecute() const;
+		int const &getGradeSign() const;
+		int const &getGradeExecute() const;
 
 		void	beSigned(Bureaucrat &copy);
 

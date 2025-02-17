@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:32:06 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 20:33:37 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 15:43:27 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	main() {
 
 	Bureaucrat pedroB("Pedro", 149);
 	std::cout << pedroB;
-
 	RobotomyRequestForm formRobotomy("Robotomy");
 	try
 	{
@@ -40,6 +39,7 @@ int	main() {
 	{
 		std::cerr << e.what() << '\n';
 	}
+
 	PresidentialPardonForm formPresidential("Presidential");
 	try
 	{
@@ -59,6 +59,7 @@ int	main() {
 	{
 		std::cerr << e.what() << '\n';
 	}
+
 	ShrubberyCreationForm formShrubbery("Shrubbery");
 	try
 	{
@@ -81,7 +82,6 @@ int	main() {
 
 	Bureaucrat joaoB("Joao", 1);
 	std::cout << joaoB;
-
 	try
 	{
 		joaoB.signForm(formRobotomy);

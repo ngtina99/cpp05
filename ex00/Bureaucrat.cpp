@@ -3,24 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 18:39:54 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:38:04 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+const int Bureaucrat::_minGrade = 150;
+const int Bureaucrat::_maxGrade = 1;
+
 Bureaucrat::Bureaucrat(): _name("defaultName"), _grade(150) {
 	std::cout << "Bureaucrat default constructor called for " << this->_name
 			  << "with grade " << this->_grade << std::endl;
 }
-
-//When you write throw Bureaucrat::GradeTooHighException();, you're creating an instance of that class 
-//and throwing it as an exception.
-// The parentheses () indicate that the default constructor of
-// GradeTooHighException is being called to create an instance.
 
 Bureaucrat::Bureaucrat(int grade): _name("defaultName"), _grade(grade) {
 	if(this->_grade < _maxGrade)
@@ -35,11 +33,6 @@ Bureaucrat::Bureaucrat(const std::string &name): _name(name), _grade(150) {
 	std::cout << "Bureaucrat constructor called for " << this->_name
 			  << " with grade " << this->_grade << std::endl;
 }
-
-// When you use throw in C++, it works with objects of
-//  classes that inherit from std::exception (or any class that provides a what() method). 
-// the object you throw can be of a class type (like DivisionByZeroException, GradeTooHighException, etc.), 
-// and these classes should provide the what() method.
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name), _grade(grade) {
 	if(this->_grade < _maxGrade)
@@ -66,11 +59,6 @@ Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &rhs)
 	return (*this);
 }
 
-// Basic Syntax:
-// throw exception_object;
-// Where exception_object is an instance of a class 
-// that derives from std::exception (or any other custom exception class).
-
 void	Bureaucrat::incrGrade() {
 	this->_grade--;
 	if (this->_grade < _maxGrade)
@@ -89,7 +77,7 @@ std::string const &Bureaucrat::getName() const {
 	return (this->_name);
 }
 
-int	const Bureaucrat::getGrade() const {
+int	const &Bureaucrat::getGrade() const {
 	return (this->_grade);
 }
 

@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:37 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 19:39:52 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:41:16 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
+
+const int Form::_minGrade = 150;
+const int Form::_maxGrade = 1;
 
 Form::Form(): _name("defaultForm"), _signed(false), _gradeSign(150), _gradeExecute(150) {
 	std::cout << "Form default constructor called for " << this->_name
@@ -51,9 +54,7 @@ Form::Form (const Form &copy) : _name(copy._name), _signed(copy._signed), _grade
 
 Form	&Form::operator=( const Form &rhs ) {
 	if (this !=&rhs)
-		// this->_gradeExecute = rhs._gradeExecute;
-		// this->_gradeSign = rhs._gradeExecute;
-		this->_signed = rhs._signed; //only non-const memeber!!
+		this->_signed = rhs._signed;
 	return (*this);
 }
 
@@ -78,11 +79,11 @@ std::string	Form::getSigned() const {
 		return("not signed");
 }
 
-int const Form::getGradeSign() const {
+int const &Form::getGradeSign() const {
 	return( this->_gradeSign);
 }
 
-int const Form::getGradeExecute() const {
+int const &Form::getGradeExecute() const {
 	return( this->_gradeExecute);
 }
 

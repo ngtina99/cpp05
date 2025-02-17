@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:11:58 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 20:06:18 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:47:37 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+
+const int Bureaucrat::_minGrade = 150;
+const int Bureaucrat::_maxGrade = 1;
 
 Bureaucrat::Bureaucrat(): _name("defaultName"), _grade(150) {
 	std::cout << "Bureaucrat default constructor called for " << this->_name
@@ -75,7 +78,7 @@ std::string const &Bureaucrat::getName() const {
 	return(this->_name);
 }
 
-int	const Bureaucrat::getGrade() const {
+int	const &Bureaucrat::getGrade() const {
 	return(this->_grade);
 }
 

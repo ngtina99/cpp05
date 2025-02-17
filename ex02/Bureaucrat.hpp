@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 01:12:13 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 20:59:50 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:42:16 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Bureaucrat {
 	
 	private:
 
-		static const int _minGrade = 150;
-		static const int _maxGrade = 1;
+		static const int _minGrade;
+		static const int _maxGrade;
 		std::string const _name;
 		int _grade;
 
@@ -40,7 +40,7 @@ class Bureaucrat {
 		~Bureaucrat();
 
 		std::string const	&getName() const;
-		int const getGrade() const;
+		int const &getGrade() const;
 
 		void	incrGrade();
 		void	decrGrade();

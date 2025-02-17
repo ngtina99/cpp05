@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 00:34:34 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 20:05:27 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:42:38 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ class AForm {
 		bool	_signed;
 		int const _gradeSign;
 		int const _gradeExecute;
-		static const int _minGrade = 150;
-		static const int _maxGrade = 1;
+		static const int _minGrade;
+		static const int _maxGrade;
 
 	public:
 
@@ -46,8 +46,8 @@ class AForm {
 
 		std::string const &getName() const;
 		std::string getSigned() const;
-		int const getGradeSign() const;
-		int const getGradeExecute() const;
+		int const &getGradeSign() const;
+		int const &getGradeExecute() const;
 		bool	  getSignedBool() const;
 
 		void			beSigned(Bureaucrat &copy);
@@ -74,7 +74,7 @@ class AForm {
 			public:
 
 				const char *what() const throw();
-	
+
 		};
 };
 

@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:32:06 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 18:44:35 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 15:41:30 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-// Remember. Since grade 1 is the highest one and 150 the lowest,
-// incrementing a grade 3 should give a grade 2 to the bureaucrat.
-
-// Any attempt to instantiate a Bureaucrat using an invalid grade must throw an exception
 
 int	main() {
 
