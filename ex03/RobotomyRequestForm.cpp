@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:23:33 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 22:58:56 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:49:04 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ RobotomyRequestForm::RobotomyRequestForm ( const RobotomyRequestForm &copy ) : A
 }
 
 RobotomyRequestForm    &RobotomyRequestForm::operator=( const RobotomyRequestForm &rhs ) {
+	(void) rhs;
 	return (*this);
 }
 

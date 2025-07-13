@@ -13,6 +13,9 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
+const int AForm::_minGrade = 150;
+const int AForm::_maxGrade = 1;
+
 AForm::AForm(): _name("defaultForm"), _signed(false), _gradeSign(150), _gradeExecute(150) {
 	std::cout << "AForm default constructor called for " << this->_name
 			<< " with signing grade " << this->_gradeSign <<
@@ -28,7 +31,7 @@ AForm::AForm( std::string const &name ): _name(name), _signed(false), _gradeSign
 AForm::AForm( int const gradeSign, int const gradeExecute ): _name("formName"), _signed(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute) {
 	if(this->_gradeExecute <_maxGrade || this->_gradeSign < _maxGrade )
 		throw(GradeTooHighException());
-	if(this->_gradeExecute >_minGrade || this->_gradeSign >_minGrade ) //change this try catch maybe later to fix
+	if(this->_gradeExecute >_minGrade || this->_gradeSign >_minGrade )
 		throw(GradeTooLowException());
 	std::cout << "AForm  constructor called for " << this->_name
 			<< " with signing grade " << this->_gradeSign <<
@@ -76,11 +79,11 @@ std::string	AForm::getSigned() const {
 		return("not signed");
 }
 
-int const AForm::getGradeSign() const {
+int const &AForm::getGradeSign() const {
 	return( this->_gradeSign);
 }
 
-int const AForm::getGradeExecute() const {
+int const &AForm::getGradeExecute() const {
 	return( this->_gradeExecute);
 }
 

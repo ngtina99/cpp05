@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:23:40 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 22:59:20 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 18:48:49 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ ShrubberyCreationForm::ShrubberyCreationForm ( const ShrubberyCreationForm &copy
 }
 
 ShrubberyCreationForm    &ShrubberyCreationForm::operator=( const ShrubberyCreationForm &rhs ) {
+	(void) rhs;
 	return (*this);
 }
 
@@ -40,7 +41,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 		throw (Bureaucrat::GradeTooLowException());
 	else {
 		std::string fileName = this->_target + "_shrubbery";
-		std::ofstream outfile(fileName);	
+		std::ofstream outfile(fileName.c_str());	
 		outfile << TREE;
 	}
 }
