@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 21:05:07 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/13 22:56:58 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/27 01:44:46 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Intern {
 		Intern &operator=(Intern &rhs);
 
 		AForm	*makeForm(std::string formName, std::string formTarget);
+
 };
 
 #endif
