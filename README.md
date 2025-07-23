@@ -52,7 +52,7 @@ ex03 — At least this beats coffee-making:
 Implement an Intern class with a makeForm() factory function that creates forms by name. Avoid ugly if/else chains; use elegant design.
 
 ## 💼 Connect
-If you have any questions or suggestions, feel free to connect: 🔗 [LinkedIn: Valentina Nguyen](https://www.linkedin.com/in/valentina-nguyen-tina/) 🙋‍♀️
+If you have any questions or suggestions, feel free to connect: 🔗 [LinkedIn: Valentina Nguyen](https://www.linkedin.com/in/valentina-nguyen-t/) 🙋‍♀️
 
 ## 🖥️ System Compatibility
 This project was developed and tested on Linux (Ubuntu).
